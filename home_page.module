@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function home_page_theme($existing, $type, $theme, $path) {
+  return [
+    'home_page_template' => [
+      'variables' => [],
+      'template' => 'home-page',
+    ],
+  ];
+}

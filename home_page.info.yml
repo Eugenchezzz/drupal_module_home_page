@@ -1,0 +1,5 @@
+name: 'Home Page'
+type: module
+description: 'A module that provides a home page with a blue text "дом".'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
