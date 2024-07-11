@@ -1,3 +1,21 @@
 <div style="color: blue;">
   <h1>дом</h1>
+  <button type="button" id="button">кнопа</button>
 </div>
+
+<script>
+    document.getElementById("button").addEventListener("click", function(){
+
+        fetch(' {{ path('home_page.get_data') }} ', {
+            method: "GET"
+        })
+        .then(response => response.json()) // преобразование ответа их json
+        .then(data =>{
+            //обработка ответа от php
+            console.log(data);
+        })
+        .catch(error => {
+            console.error("Error: ", error);
+        })
+    })
+</script>

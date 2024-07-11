@@ -5,3 +5,11 @@ home_page.home:
     _title: 'Home'
   requirements:
     _permission: 'access content'
+
+home_page.get_data:
+  path: '/home_page/get_data'
+  defaults:
+    _controller: '\Drupal\home_page\Controller\HomePageController::getData'
+    _title: 'Get Data'
+  requirements:
+    _permission: 'access content'
