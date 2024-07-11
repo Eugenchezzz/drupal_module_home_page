@@ -1,0 +1,13 @@
+{
+    "name": "drupal/home_page",
+    "description": "Custom module to demonstrate PhpSpreadsheet",
+    "type": "drupal-module",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\home_page\\": "src/"
+        }
+    }
+}

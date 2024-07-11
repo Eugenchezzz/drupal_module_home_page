@@ -1,6 +1,7 @@
 <div style="color: blue;">
   <h1>дом</h1>
   <button type="button" id="button">кнопа</button>
+  <div id="data_placeholder"></div>
 </div>
 
 <script>
@@ -13,6 +14,15 @@
         .then(data =>{
             //обработка ответа от php
             console.log(data);
+            let data_placeholder = document.getElementById("data_placeholder");
+
+            for(let i = 0; i < data.length; i++ ){
+              data_placeholder.insertAdjacentHTML("beforeend",
+                `<div style="border: solid 2px black;"><br><br><h3> Имя - ${data[i][0]}</h3><br> <h3> должность - ${data[i][3]} </h3><br></div>`
+              )
+            }
+
+
         })
         .catch(error => {
             console.error("Error: ", error);
